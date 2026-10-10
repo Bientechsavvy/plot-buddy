@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plot Buddy | Weekly outdoor garden card</title>
+<style>
+:root{--ink:#14261c;--muted:#58675d;--bg:#f4f7f2;--green:#2f7d4f;--deep:#1c4d31;--sun:#f2b705;--line:#dde5dc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:560px;margin:0 auto;padding:0 18px 48px}
+header{background:linear-gradient(160deg,var(--green),var(--deep));color:#fff;padding:40px 18px 56px}
+header .wrap{padding-bottom:0}
+h1{margin:0 0 8px;font-size:2rem;letter-spacing:-.02em}
+header p{margin:0;opacity:.9}
+main{margin-top:-32px}
+form,.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 10px 30px rgba(20,38,28,.1);margin-bottom:18px}
+form{display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:600;font-size:.93rem}
+select,input{font:inherit;font-weight:400;padding:11px 12px;border:1px solid #c5d0c6;border-radius:10px;background:#fbfdfb}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:14px;cursor:pointer;background:var(--sun);color:var(--ink)}
+button.alt{background:var(--green);color:#fff}
+.hint{font-size:.85rem;color:var(--muted);margin:0}
+.card{display:none}
+.card pre{white-space:pre-wrap;font:inherit;margin:0 0 14px}
+.meta{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:6px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.actions button{flex:1}
+.err{color:#9b1c1c;font-weight:600}
+@media print{header,form,.actions,.meta{display:none}body{background:#fff}.card{display:block;box-shadow:none;border:2px solid #000}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>Plot Buddy</h1><p>One minute here. Then go outside and grow something.</p></div></header>
+<div class="wrap"><main>
+<form id="f">
+  <div class="row">
+    <label>Your space
+      <select id="space"><option value="bucket">Bucket</option><option value="bag">Grow bag</option><option value="balcony">Balcony</option><option value="backyard">Backyard</option></select></label>
+    <label>Language
+      <select id="lang"><option value="en">English</option><option value="pidgin">Pidgin</option></select></label>
+  </div>
+  <label>Already planted something? (optional)
+    <select id="crop"><option value="">Nothing yet</option><option value="okra">Okra</option><option value="tomato">Tomato</option><option value="pepper">Pepper</option><option value="leafy_greens">Leafy greens</option></select></label>
+  <label>When did you plant it?
+    <input type="date" id="date"></label>
+  <button class="alt" type="submit">Get my outdoor card</button>
+  <p class="hint">Timing is a guide for Lagos, Nigeria. Always check with a local extension officer.</p>
+</form>
+<section class="card" id="card">
+  <pre id="text"></pre>
+  <div class="actions"><button id="wa" type="button">Send to WhatsApp</button><button id="pr" type="button" class="alt">Print card</button></div>
+  <div class="meta" id="meta"></div>
+</section>
+<p class="err" id="err"></p>
+</main></div>
+<script>
+const $ = id => document.getElementById(id);
+$("f").addEventListener("submit", async e => {
+  e.preventDefault(); $("err").textContent = "";
+  const body = {space: $("space").value, language: $("lang").value, already_planted: []};
+  if ($("crop").value && $("date").value) body.already_planted.push({crop: $("crop").value, date: $("date").value});
+  try {
+    const r = await fetch("/api/plan", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error || "Something went wrong");
+    $("text").textContent = d.card_text;
+    $("meta").textContent = "Written by: " + d.phrased_by + ". Sources: " + (d.sources.length ? d.sources.join(", ") : "none needed this week");
+    $("card").style.display = "block"; $("card").scrollIntoView({behavior: "smooth"});
+  } catch (err) { $("err").textContent = err.message; }
+});
+$("wa").onclick = () => window.open("https://wa.me/?text=" + encodeURIComponent($("text").textContent), "_blank", "noopener");
+$("pr").onclick = () => window.print();
+</script>
+</body>
+</html>

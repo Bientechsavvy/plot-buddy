@@ -1,0 +1,60 @@
+=== today=2026-10-10 space=bucket planted=[]
+OUTDOOR CARD | Week of 2026-10-10 | Lagos, Nigeria
+Put the phone down. Go outside for about 20 minutes.
+
+1. Plant Leafy greens (spinach, ugwu, lettuce) in your bucket. Make sure the container has drainage holes. (~20 min)
+
+Check back in 7 days.
+Note: The leafy-greens timing comes from a low-confidence source. Please check with a local extension officer.
+
+=== today=2026-10-10 space=balcony planted=[{'crop': 'okra', 'date': '2026-08-01'}]
+OUTDOOR CARD | Week of 2026-10-10 | Lagos, Nigeria
+Put the phone down. Go outside for about 30 minutes.
+
+1. Plant Leafy greens (spinach, ugwu, lettuce) in your balcony. Make sure the container has drainage holes. (~20 min)
+2. Check your Okra: it is 70 days old and may be ready to harvest (sources say 6 to 12 weeks after planting). (~10 min)
+
+Check back in 7 days.
+Note: The leafy-greens timing comes from a low-confidence source. Please check with a local extension officer.
+
+=== today=2026-05-12 space=backyard planted=[]
+OUTDOOR CARD | Week of 2026-05-12 | Lagos, Nigeria
+Put the phone down. Go outside for about 40 minutes.
+
+1. Plant Okra in your backyard. Make sure the container has drainage holes. (~20 min)
+2. Plant Tomato in your backyard. Make sure the container has drainage holes. (~20 min)
+
+Check back in 7 days.
+Note: The leafy-greens timing comes from a low-confidence source. Please check with a local extension officer.
+
+=== today=2026-11-15 space=bag planted=[{'crop': 'tomato', 'date': '2026-11-01'}]
+OUTDOOR CARD | Week of 2026-11-15 | Lagos, Nigeria
+Put the phone down. Go outside for about 50 minutes.
+
+1. Plant Tomato in your bag. Make sure the container has drainage holes. (~20 min)
+2. Plant Pepper in your bag. Make sure the container has drainage holes. (~20 min)
+3. Check your Tomato: day 14. Water if the soil is dry and look for pests. (~10 min)
+
+Check back in 7 days.
+Note: The leafy-greens timing comes from a low-confidence source. Please check with a local extension officer.
+
+=== today=2026-03-02 space=bucket planted=[]
+OUTDOOR CARD | Week of 2026-03-02 | Lagos, Nigeria
+Put the phone down. Go outside for about 20 minutes.
+
+1. Plant Leafy greens (spinach, ugwu, lettuce) in your bucket. Make sure the container has drainage holes. (~20 min)
+
+Check back in 7 days.
+Note: The leafy-greens timing comes from a low-confidence source. Please check with a local extension officer.
+
+=== today=2026-07-20 space=bucket planted=[{'crop': 'pepper', 'date': '2026-05-20'}]
+OUTDOOR CARD | Week of 2026-07-20 | Lagos, Nigeria
+Put the phone down. Go outside for about 50 minutes.
+
+1. Plant Okra in your bucket. Make sure the container has drainage holes. (~20 min)
+2. Plant Tomato in your bucket. Make sure the container has drainage holes. (~20 min)
+3. Check your Pepper: it is 61 days old and may be ready to harvest (sources say 6 to 12 weeks after planting). (~10 min)
+
+Check back in 7 days.
+Note: The leafy-greens timing comes from a low-confidence source. Please check with a local extension officer.
+

@@ -1,0 +1,30 @@
+{
+  "region": "Lagos, Nigeria",
+  "season_note": "Planting windows are a guide. Sources differ on exact dates, and every crop is marked verified:false until a local extension officer confirms it.",
+  "crops": [
+    {"id": "okra", "name": "Okra", "container_ok": ["bucket", "bag", "backyard"],
+     "windows": [
+       {"months": [4], "label": "early April sowing did better in southern Nigeria", "confidence": "high",
+        "source": "https://resolve.cambridge.org/core/journals/journal-of-agricultural-science/article/effects-of-sowing-date-on-the-growth-yield-and-quality-of-okra-abelmoschus-esculentus-l-moench-in-southern-nigeria/2147145E4332312700E4FC243607B44C"},
+       {"months": [5, 6], "label": "early rainy season (best for pod numbers)", "confidence": "high",
+        "source": "https://www.cambridge.org/core/journals/journal-of-agricultural-science/article/optimum-sowing-dates-for-okra-abelmoschus-esculentus-in-monoculture-and-mixture-with-cassava-manihot-esculenta-during-the-rainy-season-in-the-southwest-of-nigeria/4995B1D446248D960E04C1DDF3895817"},
+       {"months": [7, 8], "label": "late rainy season", "confidence": "high",
+        "source": "https://www.cambridge.org/core/journals/journal-of-agricultural-science/article/optimum-sowing-dates-for-okra-abelmoschus-esculentus-in-monoculture-and-mixture-with-cassava-manihot-esculenta-during-the-rainy-season-in-the-southwest-of-nigeria/4995B1D446248D960E04C1DDF3895817"}],
+     "harvest_weeks": [6, 12], "harvest_source": "https://www.agriculturenigeria.com/?p=21759", "verified": false},
+    {"id": "tomato", "name": "Tomato", "container_ok": ["bucket", "bag", "balcony", "backyard"],
+     "windows": [
+       {"months": [4, 5, 6, 7], "label": "rainy-season planting", "confidence": "medium", "source": "https://www.agriculturenigeria.com/?p=21759"},
+       {"months": [11, 12, 1, 2], "label": "dry-season planting (needs regular watering)", "confidence": "medium", "source": "https://www.agriculturenigeria.com/?p=21759"}],
+     "harvest_weeks": [6, 12], "harvest_source": "https://www.agriculturenigeria.com/?p=21759", "verified": false},
+    {"id": "pepper", "name": "Pepper", "container_ok": ["bucket", "bag", "balcony", "backyard"],
+     "windows": [
+       {"months": [4, 5, 6, 7], "label": "rainy-season planting", "confidence": "medium", "source": "https://www.agriculturenigeria.com/?p=21759"},
+       {"months": [11, 12, 1, 2], "label": "dry-season planting (needs regular watering)", "confidence": "medium", "source": "https://www.agriculturenigeria.com/?p=21759"}],
+     "harvest_weeks": [6, 12], "harvest_source": "https://www.agriculturenigeria.com/?p=21759", "verified": false},
+    {"id": "leafy_greens", "name": "Leafy greens (spinach, ugwu, lettuce)", "container_ok": ["bucket", "bag", "balcony", "backyard"],
+     "windows": [
+       {"months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "label": "a new batch every 3 weeks in containers (low-confidence source)", "confidence": "low",
+        "source": "https://ejsdprogram.hedang.org/tag/climate-action/page/2/"}],
+     "harvest_weeks": [6, 12], "harvest_source": "https://www.agriculturenigeria.com/?p=21759", "verified": false}
+  ]
+}
