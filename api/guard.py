@@ -11,7 +11,8 @@ def _nums(text):
 
 
 def check(model_text, plan):
-    """True only if the model text adds no new numbers, money, links or crops."""
+    """True only if the model text adds no new numbers, money, links or crops,
+    and still contains the total outdoor minutes from the card."""
     t = (model_text or "").strip()
     if not t or len(t) > 900:
         return False
@@ -20,5 +21,7 @@ def check(model_text, plan):
     base = plan["card_text"].lower()
     low = t.lower()
     if any(c in low and c not in base for c in OTHER_CROPS):
+        return False
+    if str(plan.get("total_minutes", "")) not in _nums(t):
         return False
     return _nums(t) <= _nums(plan["card_text"])
