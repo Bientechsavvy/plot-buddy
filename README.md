@@ -3,6 +3,8 @@
 A weekly outdoor coach for small home gardens (bucket, bag, balcony, backyard) in Lagos, Nigeria.
 You spend about one minute on the screen, then 20 to 30 minutes outside. Hacktoberfest 2026, Week 1: Touch Grass.
 
+## Live link - https://plot-buddy.onrender.com/
+
 ## How it works
 - `api/planner.py` decides what to do this week from a sourced rules file (`api/rules/crops_lagos.json`). Plain code, no AI.
 - An open-weight model (`qwen2.5:1.5b` via Ollama) only rewrites the card in friendly English or Pidgin.
